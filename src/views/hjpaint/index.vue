@@ -81,23 +81,23 @@
       },
       canvasUp(e) {
         if (this.hasOnGoingStroke === true) {
-            var x, y;
-            switch (e.type) {
-              case 'touchend':
-                x = e.changedTouches[0].clientX - $canvas.offset().left;
-                y = e.changedTouches[0].clientY - $canvas.offset().top;
-              break;
-              default:
-                x = e.offsetX;
-                y = e.offsetY;
-              break;
-            }
-            //this.ctx.strokeStyle = selectedColor.regularCode;
-            this.ctx.strokeStyle = '#222'
-            this.ctx.lineTo(x, y);
-            this.ctx.stroke();
-            this.hasOnGoingStroke = false;
-            // saveImageData();
+          var x, y;
+          switch (e.type) {
+            case 'touchend':
+              x = e.changedTouches[0].clientX - $canvas.offset().left;
+              y = e.changedTouches[0].clientY - $canvas.offset().top;
+            break;
+            default:
+              x = e.offsetX;
+              y = e.offsetY;
+            break;
+          }
+          //this.ctx.strokeStyle = selectedColor.regularCode;
+          this.ctx.strokeStyle = '#222'
+          this.ctx.lineTo(x, y);
+          this.ctx.stroke();
+          this.hasOnGoingStroke = false;
+          // saveImageData();
         }
       },
       canvasMove(e) {
